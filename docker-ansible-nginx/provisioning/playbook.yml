@@ -1,0 +1,5 @@
+---
+- name: Run Docker Ubuntu
+  hosts: all
+  roles:
+    - { role: geerlingguy.nginx }

@@ -1,0 +1,3 @@
+.vagrant
+docker-ansible-nginx/provisioning/
+!docker-ansible-nginx/provisioning/playbook.yml
