@@ -51,6 +51,11 @@ Run your image
 docker run -it --rm docker-ansible-nginx
 ```
 
+Todo List
+---------
+
+ - Ship an example with multi-container configuration working
+
 Conclusion
 ----------
 
