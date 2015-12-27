@@ -38,17 +38,27 @@ cd docker-ansible-nginx
 ansible-galaxy install geerlingguy.nginx -p .
 ```
 
-Build your docker image
+```
+cd docker-ansible-php
+ansible-galaxy install kosssi.php -p .
+```
+
+Build your docker images
 
 ```
 cd docker-ansible-nginx
 docker build -t docker-ansible-nginx .
 ```
 
+```
+cd docker-ansible-php
+docker build -t docker-ansible-php .
+```
+
 Run your image
 
 ```
-docker run -it --rm docker-ansible-nginx
+docker run -it --rm docker-ansible-php
 ```
 
 Todo List
