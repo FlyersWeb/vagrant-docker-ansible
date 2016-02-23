@@ -1,5 +1,0 @@
----
-- name: Run PHP Ubuntu
-  hosts: all
-  roles:
-    - { role: kosssi.php, tags: php }

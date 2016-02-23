@@ -1,12 +1,12 @@
 README
 ======
 
-A vagrant shipped with a docker shipped with an ansible provisioning an nginx
+A vagrant shipped with a docker shipped with an ansible provisioning an nginx.
 
 Introduction
 ------------
 
-I've made a post on my blog about what would be my best development tool set to start a fresh development. I've made a try to explain what it would be if we mixed all that great relatively new stuff going on as of **vagrant** virtual machine, **docker** container system and **ansible** provisioning.
+I've made a post on my blog about what would be my best development environment to start a fresh project. I tried to explain that it would be a mix of all that great stuff pushing up as of **vagrant** virtual machine, **docker** container system and **ansible** provisioning. To know more about it, go check http://goo.gl/ZRudPl.
 
 Docker drawbacks
 ----------------
@@ -20,7 +20,7 @@ That is why I've created this project to show you how you can create a Vagrant v
   1. install an ``ubuntu trusty`` virtual machine shipped with docker (see Vagrantfile)
   2. share the docker-ansible-nginx folder containing a Dockerfile with an ``ubuntu vivid`` image.
   3. ship in this docker image the ``ansible playbook`` to install a ``nginx server`` inside of it
-  4. allows you to edit only the playbook to ship what you want in your docker image
+  4. allows you to edit only the playbook to ship what you want in your docker image or elsewhere
 
 How to use it
 -------------
@@ -38,11 +38,6 @@ cd docker-ansible-nginx
 ansible-galaxy install geerlingguy.nginx -p .
 ```
 
-```
-cd docker-ansible-php
-ansible-galaxy install kosssi.php -p .
-```
-
 Build your docker images
 
 ```
@@ -50,24 +45,16 @@ cd docker-ansible-nginx
 docker build -t docker-ansible-nginx .
 ```
 
-```
-cd docker-ansible-php
-docker build -t docker-ansible-php .
-```
-
 Run your image
 
 ```
-docker run -it --rm docker-ansible-php
+docker run -it --rm docker-ansible-nginx
 ```
-
-Todo List
----------
-
- - Ship an example with multi-container configuration working
 
 Conclusion
 ----------
+
+This is just a demonstration of such a development environment. I recommend you to use a more stable docker container project such as [William-Yeh/docker-ansible](https://github.com/William-Yeh/docker-ansible).
 
 By combining the best of these tools, you can easily create your necessary development environment for your projects. Using ansible allows you to deploy them with the same exact version on your production servers.
 
