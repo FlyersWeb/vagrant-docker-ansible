@@ -28,7 +28,7 @@ Vagrant.configure(2) do |config|
   # using a specific IP.
   config.vm.network "private_network", type: "dhcp"
 
-  config.vm.hostname = "ansible-ubuntutrusty64"
+  config.vm.hostname = "ubuntutrusty64"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -50,7 +50,7 @@ Vagrant.configure(2) do |config|
     vb.gui = false
 
     # Customize the amount of memory on the VM:
-    vb.memory = "1024"
+    vb.memory = "2048"
   end
   #
   # View the documentation for the provider you are using for more
@@ -71,6 +71,6 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get install -y apache2
   # SHELL
   config.vm.provision "docker",
-    images: ["ubuntu:15.04"]
+    images: ["ubuntu:trusty"]
 
 end
